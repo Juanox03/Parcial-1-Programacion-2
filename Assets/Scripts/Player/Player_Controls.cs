@@ -5,13 +5,11 @@ using UnityEngine;
 public class Player_Controls : MonoBehaviour
 {
     private Player_Movement _movement;
-    private Door _door;
     private float _inputMouseX, _inputMouseY, _inputVertical, _inputHorizontal;
 
     private void Awake()
     {
         _movement = GetComponent<Player_Movement>();
-        _door = GetComponent<Door>();
     }
 
     public void ArtificialUpdate()
@@ -35,11 +33,6 @@ public class Player_Controls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _movement.Jump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _door.ChangeDoorState();
         }
     }
 }

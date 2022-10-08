@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _camera = Camera.main.GetComponent<Player_Camera>();
     }
 
     public void Movement(float yAxis, float xAxis)
